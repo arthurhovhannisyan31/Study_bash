@@ -1,0 +1,25 @@
+#!/bin/bash
+
+case $1 in
+	-h | --help)
+		echo "Welcom to weather app"
+		echo "-3 for next 3 days of weather"
+		echo "-l | --location to specify location"
+		echo "* any other value(s) for 1 day of weather"
+		;;
+	-3)
+		echo "You provided -3"
+		curl "wttr.in"
+		;;
+	-l | --location)
+		curl "wttr.in/$2"
+		;;
+	*)
+		echo "Any other value"
+		curl "wttr.in?m1"
+		;;
+
+esac
+
+#curl "wttr.in/$1"
+
