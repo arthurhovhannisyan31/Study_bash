@@ -1,0 +1,6 @@
+touch file{1..100}.txt
+
+
+tar -cvgf filename.tar.gz <source>
+tar -xvf <source>
+
